@@ -1,0 +1,43 @@
+body { font-family: 
+    Arial; background: 
+    #f4f6f8; 
+    padding: 20px; 
+}
+h2 { 
+    text-align: center; 
+    margin-bottom: 15px;
+ }
+.top-row { 
+    display: flex; 
+    justify-content: center; 
+    gap: 10px; 
+    margin-bottom: 20px; 
+}
+.top-row input, .top-row button { padding: 8px; font-size: 14px; border-radius: 6px; border: 1px solid #ccc; }
+.top-row button { background: #28a745; color: white; border: none; cursor: pointer; }
+.cards { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+.card { padding: 15px; border-radius: 10px; width: 220px; box-shadow: 0 3px 6px rgba(0,0,0,0.1); }
+.card h3 { margin-top: 0; margin-bottom: 10px; text-align: center; color: white; padding: 5px; border-radius: 6px; }
+#allCard { background: #343a40; } #allCard h3 { background: #495057; color: white; }
+#newCard { background: #d4edda; } #newCard h3 { background: #28a745; }
+#pendingCard { background: #cce5ff; } #pendingCard h3 { background: #007bff; }
+#doneCard { background: #e2e3e5; } #doneCard h3 { background: #6c757d; }
+#cancelCard { background: #f8d7da; } #cancelCard h3 { background: #dc3545; }
+
+ul { list-style: none; padding: 0; margin: 0; }
+li { margin-bottom: 8px; padding: 8px; border-radius: 6px; display: flex; flex-direction: column; }
+li span { font-size: 12px; color: #555; margin-bottom: 5px; }
+li input[type="checkbox"] { margin-right: 5px; }
+.btn-row { display: flex; justify-content: flex-end; gap: 5px; flex-wrap: wrap; }
+.btn-row button { font-size: 12px; padding: 3px 6px; border: none; border-radius: 5px; cursor: pointer; color: white; }
+.pending-btn { background: #007bff; }
+.done-btn { background: #28a745; }
+.cancel-btn { background: #dc3545; }
+.close-btn { background: #6c757d; }
+
+
+.all-new { background-color: #d4edda; }
+.all-pending { background-color: #cce5ff; }
+.all-done { background-color: #e2e3e5; }
+.all-cancel { background-color: #f8d7da; }
+li div { margin-bottom: 5px; }

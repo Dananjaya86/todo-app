@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+   
+   <h2>To-Do List</h2>
+
+<div class="top-row">
+  <input type="text" id="taskInput" placeholder="Enter Task Name">
+  <input type="date" id="dateInput">
+  <button onclick="addTask()">Add</button>
+</div>
+
+<div class="cards">
+  <div class="card" id="allCard">
+    <h3>All Tasks</h3>
+    <ul id="allList"></ul>
+  </div>
+  <div class="card" id="newCard">
+    <h3>New</h3>
+    <ul id="newList"></ul>
+  </div>
+  <div class="card" id="pendingCard">
+    <h3>Pending</h3>
+    <ul id="pendingList"></ul>
+  </div>
+  <div class="card" id="doneCard">
+    <h3>Done</h3>
+    <ul id="doneList"></ul>
+  </div>
+  <div class="card" id="cancelCard">
+    <h3>Cancel</h3>
+    <ul id="cancelList"></ul>
+  </div>
+</div>
+
+
+
+  <script src="./sript.js"></script>
+</body>
+</html>
