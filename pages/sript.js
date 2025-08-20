@@ -5,6 +5,13 @@ function addTask() {
   const date = document.getElementById("dateInput").value;
   if (!name || !date) return alert("Enter task and date");
 
+  const selectedDate = new Date(date);
+  const today = new Date();
+  today.setHours(0,0,0,0); // reset time
+  if(selectedDate < today) {
+    return alert("You cannot select a past date!");
+  }
+
   tasks.push({id: Date.now(), name, date, status: "new"});
   renderTasks();
   document.getElementById("taskInput").value = "";
@@ -26,7 +33,7 @@ function renderTasks() {
     const createLi = (isAll=false) => {
       const li = document.createElement("li");
       if(isAll) li.classList.add("all-" + task.status);
-      li.innerHTML = `<div><input type="checkbox"> ${task.name}</div><span>${task.date} | Status: ${task.status}</span>`;
+      li.innerHTML = ` ${task.name}</div><span>${task.date} | Status: ${task.status}</span>`;
       const btnRow = document.createElement("div");
       btnRow.className = "btn-row";
 
