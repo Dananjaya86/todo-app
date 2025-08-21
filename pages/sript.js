@@ -3,13 +3,23 @@ let tasks = [];
 function addTask() {
   const name = document.getElementById("taskInput").value.trim();
   const date = document.getElementById("dateInput").value;
-  if (!name || !date) return alert("Enter task and date");
+  if (!name || !date) return Swal.fire({
+  icon: "error",
+  title: "Oops...",
+  text: "You are Not Entered Date or task Please Check!",
+  
+});
 
   const selectedDate = new Date(date);
   const today = new Date();
   today.setHours(0,0,0,0); // reset time
   if(selectedDate < today) {
-    return alert("You cannot select a past date!");
+    return Swal.fire({
+  icon: "error",
+  title: "Wait!",
+  text: "You are Entered Past Date !",
+  draggable: true
+});
   }
 
   tasks.push({id: Date.now(), name, date, status: "new"});
@@ -82,3 +92,4 @@ function removeTask(id) {
   tasks = tasks.filter(t => t.id !== id);
   renderTasks();
 }
+
